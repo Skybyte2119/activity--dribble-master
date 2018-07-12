@@ -1,0 +1,53 @@
+
+$general-background-color: #F4F4F4;
+$column-background-color: white;
+$color-icon: #AAA;
+$padding-image: 10px;
+$column-width: 350px;
+$column-border-size: 1px;
+$column-border-type: solid;
+$column-border-color: rgba(0, 0, 0, 0.07);
+$column-border-scheme: $column-border-size $column-border-type $column-border-color;
+$column-shadow: 0px 1px 2px rgba(0,0,0,.7);
+$column-width-secondary: 220px;
+$image-width: 100%;
+$image-height: 88%;
+
+
+* {
+  box-sizing: border-box;
+  /*outline: 1px solid red;*/ }
+
+body {
+	background-color: $general-background-color;
+}
+
+
+.grid {
+  &__container {
+  	display: flex;
+  }
+  &__column {
+	width: $column-width;
+	background-color: $column-background-color;
+	outline: $column-border-scheme;
+	-webkit-box-shadow: $column-shadow;
+    -moz-box-shadow: $column-shadow;
+    box-shadow: $column-shadow;
+	margin: 7px;
+  }
+  &__column--border {
+  	width: $column-width-secondary;
+  }
+  &__icons {
+    color: $color-icon;
+	position: relative;
+    left: 59%;
+  }
+  &__images {
+    width: $image-width;
+    height: $image-height;
+    padding: $padding-image;
+  }
+}
+
